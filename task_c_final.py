@@ -306,19 +306,13 @@ def run_task_c(output_path=None):
     test_dir = TASKC_TEST_DIR
 
     if not os.path.isdir(train_dir):
-        alt = r'C:\Users\ASUS\OneDrive\Desktop\睿创杯赛题4\赛题数据\c)_classification_dataset_split'
-        if os.path.isdir(alt):
-            train_dir = alt
-        else:
-            print(f'[ERROR] Train dir not found: {train_dir}')
-            return None
+        print(f'[ERROR] Train dir not found: {train_dir}')
+        print('请将赛题训练数据放入 data/train/ 目录')
+        return None
     if not os.path.isdir(test_dir):
-        alt = r'C:\Users\ASUS\OneDrive\Desktop\睿创杯赛题4\赛题数据\c)_classification_test_data'
-        if os.path.isdir(alt):
-            test_dir = alt
-        else:
-            print(f'[ERROR] Test dir not found: {test_dir}')
-            return None
+        print(f'[ERROR] Test dir not found: {test_dir}')
+        print('请将赛题测试数据放入 data/test/ 目录')
+        return None
 
     print('=' * 60)
     print('  Task C Optimized: Enhanced Voting (GB400+RF400+ET250)')

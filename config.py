@@ -86,11 +86,12 @@ MIN_SNR_THRESHOLD = 50
 DOPPLER_VALID_FILTER = True
 
 # ============================================================
-# 路径配置 (final/data目录)
+# 路径配置 (数据放在 data/ 目录下)
 # ============================================================
-BASE_DIR = r'C:\Users\ASUS\OneDrive\Desktop\睿创杯赛题4\agant'
-DATA_DIR = f'{BASE_DIR}/data'
-OUTPUT_DIR = f'{BASE_DIR}/output'
+import os as _os
+BASE_DIR = _os.path.dirname(_os.path.abspath(__file__))
+DATA_DIR = _os.path.join(BASE_DIR, 'data')
+OUTPUT_DIR = _os.path.join(BASE_DIR, 'output')
 
 TASK_A_DATA = f'{DATA_DIR}/a)_Target_dataset.mat'
 TRACK_A_DATA = f'{DATA_DIR}/b)_Track_A_dataset.csv'

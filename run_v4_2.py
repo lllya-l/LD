@@ -9,13 +9,11 @@ Task C: 目标分类识别 (使用final版本)
 import time, os, sys, warnings
 warnings.filterwarnings('ignore')
 
-V42_DIR = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, V42_DIR)
-sys.path.insert(0, project_root)
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, PROJECT_DIR)
 
 from config import *
-OUT_DIR = os.path.join(V42_DIR, '任务提交')
+OUT_DIR = os.path.join(PROJECT_DIR, 'output')
 os.makedirs(OUT_DIR, exist_ok=True)
 
 t0 = time.time()
